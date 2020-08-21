@@ -91,13 +91,170 @@ class SortingRobot:
         Returns True if the robot's light is on and False otherwise.
         """
         return self._light == "ON"
+    # def _bubble_sort(self):
+
+    #     if len(self._list) == 0:
+    #         return self._list
+    #     for i in range(len(self._list)):
+    #         for j in range(0, len(self._list)-i-1):
+    #             if self._list[j] > self._list[j + 1]:
+    #                 self._list[j] ,self._list[j + 1] = self._list[j + 1],self._list[j]
+    #     return self._list            
 
     def sort(self):
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # start at the array
+        # loop thru each element at the list
+        # grab the first element in the list
+        # move right
+        # if the element held is greater than the element in front of it
+        # do the swap and move right and repeat
+        # else just keep moving right
+        # when the robot is at the end of the list 
+        # move left until it finds the nan item and replaces it with the item held
+        # repeat!
+        self.swap_item()
+        for i in range(len(self._list)):
+            
+            # self.swap_item()
+            # self.move_right()
+            
+            if self.compare_item == 1:
+                self.swap_item()
+                self.move_right()
+            else:
+                self.move_right()
+            
+            if self.can_move_right == False:
+                while self.can_move_left() == True:
+                    self.move_left()
+                if self.compare_item is None:
+                    self.swap_item()
+                    self.move_right()
+                    break            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # while self.can_move_right() == True:
+        #     self.swap_item()
+        #     self.move_right()
+        #     if self.compare_item() == 1:
+        #         self.swap_item()
+        #         self.move_right()
+        #     else:
+        #         self.move_right()        
+        # else:
+        #     self.move_left()
+        #     if self.compare_item() is None:
+        #         self.swap_item()        
+
+
+
+
+
+        "this is the only implementation that passed all the tests on this one, i do not think it breaks the rules but here it is"
+
+        # if len(self._list) == 0:
+        #     return self._list
+        # for i in range(len(self._list)):
+        #     for j in range(0, len(self._list)-i-1):
+        #         if self._list[j] > self._list[j + 1]:
+        #             self._list[j] ,self._list[j + 1] = self._list[j + 1],self._list[j]
+        # return self._list            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # return self._bubble_sort()
+        # if self.compare_item() == None:
+        #     self.swap_item()
+
+        # while self.compare_item() == 1:
+        #     if self.compare_item() == -1:
+        #         self.swap_item()
+        #         self.move_right()
+        #         self._position += 1
+        #     if self.can_move_right() == False:
+        #         self._position = 0
+        #     if self.compare_item    
+           
+
+        # self.can_move_left() is True:
+        #     self.move_left()
+        #     if self.compare_item() is None:
+        #         self.swap_item()   
+
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # first look at the first item on the list and compare that to the next item
+        # pick up the first item on the list Rob!
+        # if item is greater than the item next to it, switch places
+
+        # for i in range(0,len(self._list)):
+        #     if self._list[i] > self._list[i + 1]:
+        #         self._list[i], self._list[i + 1] = self._list[i+1] , self._list[i]
+        # self.swap_item()
+        # # ok rob you got the first item now compare each item to its neighbor
+        # while self._item is not None:
+
+        #     if self.can_move_right() is True:
+        #         self.move_right()
+      
+               
+        #     if self.compare_item() == 1:
+        #         self.swap_item
+                    
 
 
 if __name__ == "__main__":

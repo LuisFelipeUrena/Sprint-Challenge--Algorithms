@@ -9,12 +9,13 @@ def count_th(word, counter=0):
     # the amount of times it occurss
     # recursion only
     # base case, the word does not contain th at all, or it is empty
-    start = range(len(word))
-    if word == "":
+    word_list = list(word)
+    if len(word_list) <= 1:
         return counter
-    if word == 'th':
+    if word_list[0:2] == ['t','h']:
         counter += 1
-    return count_th(word[start + 1:])    
+    return count_th("".join(word_list[1:]), counter)    
+       
 
 
     # if word == "":

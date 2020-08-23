@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a) This would be O(n^2), the reason for that is that there are 2 operations in the code snippet and the runtime complexity will be higher based on the n value given.
+a) This would be O(n), the reason for that is that there are 2 operations in the code snippet and the runtime complexity will be higher based on the n value given.
 
 
-b) This Would be O(n), the reason for that is, on this code snippet, the runtime complexity will only increase based on the n value given.
+b) This Would be O(!n), the reason for that is, on this code snippet, the runtime complexity will  increase based on the n value given and if the input size gets even higher the j variable will always be increased times 2 making it multiply to infinity!.
 
 
-c) This would be O(2^n), the reason is that there are 2 operations and the operation recursion increases to the power of n given in the operation.
+c) This would be O(log n), the reason is that there are 2 operations and the operation recursion one of the variables get decreased by one until it reaches the base case.
 
 ## Exercise II
 - so we have the components which are: the building with n-floors and an x amount of eggs, our goal is to minimize the broken eggs if dropped from a certain floor.

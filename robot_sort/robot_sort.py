@@ -115,25 +115,131 @@ class SortingRobot:
         # when the robot is at the end of the list 
         # move left until it finds the nan item and replaces it with the item held
         # repeat!
+        # check if you are at the beggining of the list
+        if self.can_move_right() is False:
+            return self._list
+        
         self.swap_item()
-        for i in range(len(self._list)):
-            
-            # self.swap_item()
-            # self.move_right()
-            
-            if self.compare_item == 1:
+
+        while self.can_move_right() is True:
+            self.move_right()
+            if self.compare_item() == 1:
                 self.swap_item()
-                self.move_right()
-            else:
-                self.move_right()
+        while self.can_move_left() is True:
+            self.move_left()
+            if self.compare_item() == None:
+                self.swap_item()
+                break
+        self.move_right()
+        self.sort()            
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        # if self._list == sorted(self._list):
+        #     self.set_light_off()
+        #     return self._list
+        # else:
+        #     self.set_light_on() 
+        # while self.light_is_on() == True:
+        #     if self._position == 0:
+        #         self.swap_item()
             
-            if self.can_move_right == False:
-                while self.can_move_left() == True:
-                    self.move_left()
-                if self.compare_item is None:
-                    self.swap_item()
-                    self.move_right()
-                    break            
+        #     while self.can_move_right() == True:
+        #         self.move_right()
+        #         self.compare_item()
+        #         if self.compare_item() == 1:
+        #             self.swap_item()
+        #         if self.can_move_right() == False:
+        #             break    
+        #         if self._list == sorted(self._list):
+        #             self.set_light_off()
+        #             break
+            
+        #     while self.compare_item() is not None:
+        #         self.move_left()
+        #         if self.compare_item() == None:
+        #             self.swap_item()
+        #             break                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # self.swap_item()
+        # for i in range(len(self._list)):
+            
+        #     # self.swap_item()
+        #     # self.move_right()
+            
+        #     if self.compare_item == 1:
+        #         self.swap_item()
+        #         self.move_right()
+        #     else:
+        #         self.move_right()
+            
+        #     if self.can_move_right == False:
+        #         while self.can_move_left() == True:
+        #             self.move_left()
+        #         if self.compare_item is None:
+        #             self.swap_item()
+        #             self.move_right()
+        #             break            
 
 
 
